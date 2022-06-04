@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css"
 
 
 export default function App() {
@@ -21,22 +22,19 @@ export default function App() {
         <section>
             {data !== undefined ? (
                 <ul>
-                    <li>
-                        {data.name.title} {data.name.first} {data.name.last}
-                    </li>
-                    <li>Nationality: {data.nat}</li>
-                    <li>City: {data.location.city}</li>
-                    <li>Phone number: {data.phone}</li>
-                    <li>Email: {data.email}</li>
-
-                    <li>
                         <picture>
                             <img
                                 src={data.picture.large}
                                 alt={`${data.name.first} profile`}
                             />
                         </picture>
-                    </li>
+                    <li>Tytuł: {data.name.title}</li>
+                    <li>Imię: {data.name.first}</li>
+                    <li>Nazwisko: {data.name.last}</li>
+                    <li>Narodowość: {data.nat}</li>
+                    <li>Miasto: {data.location.city}</li>
+                    <li>Numer telefonu: {data.phone}</li>
+                    <li>Email: {data.email}</li>
                 </ul>
             ) : ("")}
 
